@@ -5,9 +5,8 @@
  */
 package boletin10ej2;
 
-import java.util.Locale;
 import javax.swing.JOptionPane;
-import java.util.Random;
+
 /**
  *
  * @author joterodelrio
