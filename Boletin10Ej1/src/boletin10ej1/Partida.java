@@ -50,7 +50,7 @@ public class Partida {
         }
 
         if (gameover) {
-            JOptionPane.showMessageDialog(null, "Ha perdido. Lo siento :(");
+            JOptionPane.showMessageDialog(null, "Lo siento, el número a adivinar era " + nAdivinar + " :(");
         }
 
     }
