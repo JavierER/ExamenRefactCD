@@ -5,6 +5,7 @@
  */
 package boletin10ej2;
 
+import java.util.Locale;
 import javax.swing.JOptionPane;
 import java.util.Random;
 /**
@@ -21,6 +22,7 @@ public class Partida {
 
     public void setNIntentos() {
         nIntentos = (int)(Math.random()*10+1);
+        JOptionPane.showMessageDialog(null, "Tienes " + nIntentos + " intentos. Suerte ;)");
     }
 
     public void EjecutarPartida() {
@@ -30,11 +32,15 @@ public class Partida {
             do {
                 int resposta = Integer.parseInt(JOptionPane.showInputDialog("Intento  " + (i + 1)));
                 if (resposta >= 1 && resposta <= 50) {
-                    if () {
+                    if (Math.abs(resposta-nAdivinar)>20) {
                         JOptionPane.showMessageDialog(null, "Pista " + (i + 1) + ": número moi lonxe.");
-                    } else if () {
+                    } else if (Math.abs(resposta-nAdivinar)<=20 && Math.abs(resposta-nAdivinar)>=10) {
                         JOptionPane.showMessageDialog(null, "Pista " + (i + 1) + ": número lonxe.");
-                    } else {
+                    } else if(Math.abs(resposta-nAdivinar)<10 && Math.abs(resposta-nAdivinar)>5){
+                        JOptionPane.showMessageDialog(null, "Pista " + (i + 1) + ": número preto.");
+                    }else if(Math.abs(resposta-nAdivinar)<=5 && Math.abs(resposta-nAdivinar)>0){
+                        JOptionPane.showMessageDialog(null, "Pista " + (i + 1) + ": número moi preto.");
+                    }else{
                         JOptionPane.showMessageDialog(null, "Felicidades, ha acertado.");
                         gameover = false;
                         break;
