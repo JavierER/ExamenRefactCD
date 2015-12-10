@@ -16,23 +16,23 @@ public class ExamenRefactCD {
     public static boolean p = false;
 
     public static void main(String[] args) {
-        int dig = 3;
-        int ndig = 0;
-        if (dig <= 0) {
+        int digito = 3;
+        int numerodigito = 0;
+        if (digito <= 0) {
             System.out.println("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): ");
         }
         for (int i = 1; i <= 99999; i++) {
-            int aux = i;
+            int auxiliar = i;
 
-            int contador = 0;
+            int cont = 0;
 
-            while (aux != 0) {
-                aux = aux / 10;
-                contador++;
+            while (auxiliar != 0) {
+                auxiliar = auxiliar / 10;
+                cont++;
             }
-            ndig = contador;
+            numerodigito = cont;
 
-            if (ndig == dig) {
+            if (numerodigito == digito) {
                 if (i < 4) {
                     p = true;
                 } else {
